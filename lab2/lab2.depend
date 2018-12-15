@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1542501404 source:f:\codes\lab2\main.cpp
+	<iostream>
+	<conio.h>
+	<cstdlib>
+	<windows.h>
+	<bits/stdc++.h>
+
+1543260197 source:d:\codes\lab2\main.cpp
+	<iostream>
+	<conio.h>
+	<cstdlib>
+	<windows.h>
+	<bits/stdc++.h>
+

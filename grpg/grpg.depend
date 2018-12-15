@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1544305374 source:d:\codes\grpg\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1542495939 source:f:\codes\mazebybfs\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<conio.h>
+	<cstdlib>
+	<windows.h>
+

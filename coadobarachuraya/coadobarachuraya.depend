@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1543183216 source:d:\codes\coadobarachuraya\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<map>
+

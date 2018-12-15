@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1544353026 source:d:\codes\prims\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

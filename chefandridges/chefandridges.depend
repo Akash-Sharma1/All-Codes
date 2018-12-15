@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1541876239 source:f:\codes\chefandridges\main.cpp
+	<iostream>
+	<math.h>
+

@@ -21,15 +21,14 @@ int main(){
     for(int i=0;i<n;i++){cin >> x;
         ideal.push_back(x);}
     int count=0,j=0;
-    for(int i=0;i<n;count++,i++){
-            cout<< ideal[i] << " "<< current[j];
+    for(int i=0;i<n;i++){
         if(current[j]==ideal[i]){
+            count++;
             j++;
-            continue;
         }
         else{
-            int index=findindex(current,ideal[i],j);
-            count+=index-i;
+            int index=findindex(current,ideal[i],j+1);
+            count+=index-j+1;
         }
     }
     cout << count;

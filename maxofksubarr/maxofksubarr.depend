@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1545068849 source:d:\all-codes\maxofksubarr\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

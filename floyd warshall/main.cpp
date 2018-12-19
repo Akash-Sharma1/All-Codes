@@ -25,7 +25,8 @@ void findallpath(int adj[][v]){
     }
     for(int i=1;i<v;i++){
         for(int j=1;j<v;j++){
-            cout << dist[i][j] << " ";
+            if(dist[i][j]!=INF)
+                cout << i <<" --> "<< j <<"  ==  "<<dist[i][j] << endl;
         }
         cout << endl;
     }
@@ -44,6 +45,9 @@ int main()
     addedge(adj,2,6,2);
     addedge(adj,6,4,6);
     addedge(adj,6,5,5);
+        
+}
+cout << index <<endl;
     findallpath(adj);
     return 0;
 }

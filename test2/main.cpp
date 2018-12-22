@@ -1,36 +1,54 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
-int findindex( vector<int> &curr,int x,int j){
-    int i=j;
-    for(;i<curr.size();i++){
-        if(curr[i]==x){
-            curr.erase(curr.begin()+i);
-            return i;}
+long calc(long i,long j,long n){
+    long smallest;
+    if(j>i){
+        if(j-i > i+n-j){smallest=i+n-j;}
+        else{smallest=j-i;}
     }
-    return i;
+    else{
+        if(i-j > j+n-i){smallest=j+n-i;}
+        else{smallest=i-j;}
+    }
+    return smallest;
 }
 int main(){
-    int n;
+    long n;
     cin >> n;
-    vector<int> ideal;
-    vector<int> current;
-    int x;
-    for(int i=0;i<n;i++){cin >> x;
-        current.push_back(x);}
-    for(int i=0;i<n;i++){cin >> x;
-        ideal.push_back(x);}
-    int count=0,j=0;
-    for(int i=0;i<n;i++){
-        if(current[j]==ideal[i]){
-            count++;
-            j++;
+    long arr[n];
+    for(long i=0;i<n;i++){cin >> arr[i];}
+    long sum=0;
+    for(long i=0;i<n;i++){sum+=arr[i];}
+    long k=sum/n;
+    for(long i=0;i<n;i++){arr[i]=arr[i]-k;}
+    long steps=0;
+
+    for(long i=0;i<n;i++){
+        if(arr[i]<=0)
+            continue;
+        priority_queue<pair<long,long>,vector<pair<long,long> >,greater<pair<long,long> > > pq;
+        for(long j=0;j<n;j++){
+            if(arr[j]<0){
+                long smallest=calc(i,j,n);
+                pq.push(make_pair(smallest,j));
+            }
         }
-        else{
-            int index=findindex(current,ideal[i],j+1);
-            count+=index-j+1;
+        while(arr[i]){
+            long d=pq.top().first;//distance from polong
+            long j=pq.top().second;//indexof shortage
+            pq.pop();
+            long y=-1*arr[j];//amount of shortage
+            long small=min(arr[i],y);
+            arr[i]-=small;
+            arr[j]+=small;
+
+            steps+=d*small;
         }
     }
-    cout << count;
+    cout << steps;
     return 0;
 }
+/* 5
+2 3 6 9 10*/

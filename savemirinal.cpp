@@ -20,6 +20,6 @@ int main(){
     while(q--){
         int a,b;
         cin >> a >> b;
-        cout<<v[a][b-a]<<endl;
+        cout<<v[a-1][b-a]<<endl;
     }
 }
